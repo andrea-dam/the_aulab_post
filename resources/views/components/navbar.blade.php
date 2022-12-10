@@ -29,9 +29,9 @@
                 <li class="nav-item">
                     <a class="nav-link">{{Auth::user()->name}}</a>
                 </li>
-                <li class="nav-item">
-                    <a href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('form-logout').submit();" class="dropdown-item">Logout</a>
-                    <form action="">@csrf</form>
+                <li class="nav-item me-2">
+                    <a href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('form-logout').submit();" class="nav-link">Logout</a>
+                    <form action="" class="d-none">@csrf</form>
                 </li>
                 @endauth
                 <form class="d-flex" role="search">

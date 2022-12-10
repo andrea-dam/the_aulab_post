@@ -1,6 +1,6 @@
 <div>
     
-    <form action="">
+    <form action="{{route('article.store')}}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="mb-3">
             <label for="title" class="form-label">Title</label>
