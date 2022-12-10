@@ -1,13 +1,5 @@
 <x-layout>
-    
-    @if (session('message'))
-    <div class="alert alert-success">
-        {{session('message')}}
-    </div>
-    @endif
-
-    <x-header>The Aulab Post</x-header>
-
+    <x-header>Categorie</x-header>
     <main class="container">
         <div class="row">
             @foreach ($articles as $article)
@@ -23,5 +15,4 @@
             @endforeach
         </div>
     </main>
-
 </x-layout>

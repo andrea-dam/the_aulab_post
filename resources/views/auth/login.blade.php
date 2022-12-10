@@ -1,7 +1,8 @@
 <x-layout>
+    <x-header>Accedi</x-header>
     <main class="container">
         <div class="row justify-content-center">
-            <div class="col-12 col-md-8">
+            <div class="col-12 col-md-5">
                 <form method="POST" action="{{route('login')}}">
                     @csrf
                     <div class="mb-3">

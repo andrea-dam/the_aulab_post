@@ -11,6 +11,7 @@
 <body class="bg-dark">
     <x-navbar />
     {{$slot}}
+    <x-footer />
     @livewireScripts
 </body>
 </html>
