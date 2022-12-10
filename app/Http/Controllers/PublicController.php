@@ -13,4 +13,8 @@ class PublicController extends Controller
 
         return view ('welcome', compact('articles'));
     }
+
+    public function workWithUs () {
+        return view ('work-with-us');
+    }
 }
