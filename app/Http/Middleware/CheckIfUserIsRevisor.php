@@ -6,7 +6,7 @@ use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-class CheckIfUserIsAdmin
+class CheckIfUserIsRevisor
 {
     /**
      * Handle an incoming request.
@@ -17,9 +17,9 @@ class CheckIfUserIsAdmin
      */
     public function handle(Request $request, Closure $next)
     {
-        if (Auth::user() && Auth::user()->is_admin) {
+        if (Auth::user() && Auth::user()->is_revisor) {
             return $next($request);
         }
-        return redirect()->route('welcome')->with('message', 'Solo gli amministratori possono accedere a questa sezione');
+        return redirect()->route('welcome')->with('message', 'Solo i revisori possono accedere a questa sezione');
     }
 }
