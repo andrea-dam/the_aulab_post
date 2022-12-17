@@ -34,7 +34,7 @@
                     <form action="" class="d-none">@csrf</form>
                 </li>
                 @endauth
-                <form action="{{route('search.articles')}}" method="GET" class="d-flex" role="search">
+                <form action="{{route('search.article')}}" method="GET" class="d-flex" role="search">
                     <input class="form-control me-2" type="search" name="key" placeholder="Cerca" aria-label="Search">
                     <button class="btn btn-outline-success" type="submit">Cerca</button>
                 </form>

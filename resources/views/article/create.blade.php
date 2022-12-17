@@ -3,7 +3,7 @@
     <main class="container my-5">
         <div class="row justify-content-center">
             <div class="col-12 col-md-7">
-                @livewire('create-article-form')
+                <x-create-article-form :tags="$tags"/>
             </div>
         </div>
     </main>

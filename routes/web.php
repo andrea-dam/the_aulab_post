@@ -34,6 +34,9 @@ Route::middleware('admin')->group(function() {
     Route::get('/admin/{user}/set-admin', [AdminController::class, 'makeUserAdmin'])->name('admin.makeUserAdmin');
     Route::get('/admin/{user}/set-revisor', [AdminController::class, 'makeUserRevisor'])->name('admin.makeUserRevisor');
     Route::get('/admin/{user}/set-writer', [AdminController::class, 'makeUserWriter'])->name('admin.makeUserWriter');
+    Route::post('/tag/{tag}/update', [AdminController::class, 'editTag'])->name('tag.edit');
+    Route::delete('/tag/{tag}/delete', [AdminController::class, 'deleteTag'])->name('tag.delete');
+    Route::post('/tag/store', [AdminController::class, 'storeTag'])->name('tag.store');
 });
 
 // Rotte Middleware Writer

@@ -23,6 +23,14 @@
             <input type="file" name="img" class="form-control">
         </div>
         <div class="mb-3">
+            <label for="tags" class="form-label">Tags</label>
+            <select name="tags[]" id="tags" class="form-control" multiple>
+                @foreach ($tags as $tag)
+                    <option value="{{$tag->id}}"{{$tag->name}}></option>
+                @endforeach
+            </select>
+        </div>
+        <div class="mb-3">
             <label for="body" class="form-label">Corpo dell'articolo</label>
             <textarea name="body" id="body" cols="30" rows="10" class="form-control"></textarea>
         </div>
