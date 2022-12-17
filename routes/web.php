@@ -26,6 +26,7 @@ Route::post('/user/send-role-request', [PublicController::class, 'sendRoleReques
 // Rotte Article
 Route::get('/article/{article}/show', [ArticleController::class, 'show'])->name('article.show');
 Route::get('/article/{category}/index', [ArticleController::class, 'articlesForCategory'])->name('article.category');
+Route::get('/article/search', [PublicController::class, 'searchArticle'])->name('search.article');
 
 // Rotte Middleware Admin
 Route::middleware('admin')->group(function() {
@@ -47,5 +48,4 @@ Route::middleware('revisor')->group(function() {
     Route::get('/revisor/article/{article}/detail', [RevisorController::class, 'articleDetail'])->name('revisor.detail');
     Route::get('/revisor/article/{article}/accept', [RevisorController::class, 'acceptArticle'])->name('revisor.accept');
     Route::get('/revisor/article/{article}/reject', [RevisorController::class, 'rejectArticle'])->name('revisor.reject');
-    
 });
