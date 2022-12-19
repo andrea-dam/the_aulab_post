@@ -31,12 +31,18 @@ Route::get('/article/search', [PublicController::class, 'searchArticle'])->name(
 // Rotte Middleware Admin
 Route::middleware('admin')->group(function() {
     Route::get('/admin/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
+
     Route::get('/admin/{user}/set-admin', [AdminController::class, 'makeUserAdmin'])->name('admin.makeUserAdmin');
     Route::get('/admin/{user}/set-revisor', [AdminController::class, 'makeUserRevisor'])->name('admin.makeUserRevisor');
     Route::get('/admin/{user}/set-writer', [AdminController::class, 'makeUserWriter'])->name('admin.makeUserWriter');
+
     Route::post('/tag/{tag}/update', [AdminController::class, 'editTag'])->name('tag.edit');
     Route::delete('/tag/{tag}/delete', [AdminController::class, 'deleteTag'])->name('tag.delete');
     Route::post('/tag/store', [AdminController::class, 'storeTag'])->name('tag.store');
+
+    Route::post('/category/{category}/update', [AdminController::class, 'editCategory'])->name('category.edit');
+    Route::delete('/category{category}/delete', [AdminController::class, 'deleteCategory'])->name('category.delete');
+    Route::post('/category/store', [AdminController::class, 'storeCategory'])->name('category.store');
 });
 
 // Rotte Middleware Writer

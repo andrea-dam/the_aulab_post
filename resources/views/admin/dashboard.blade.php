@@ -31,5 +31,14 @@
             </div>
         </div>
 
+        <div class="row">
+            <div class="col-12">
+                <div class="col-12 col-md-6">
+                    <h2>Aggiungi Categoria</h2>
+                    <x-categories-form />
+                </div>
+            </div>
+        </div>
+
     </main>
 </x-layout>
