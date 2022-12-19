@@ -27,6 +27,11 @@
                     <a class="nav-link" href="{{route('article.dashboard')}}">Crea Articolo</a>
                 </li>
                 @endif
+                @if (Auth::user() && Auth::user()->is_admin)
+                <li class="nav-item">
+                    <a class="nav-link" href="{{route('admin.dashboard')}}">Dashboard Amministratore</a>
+                </li>
+                @endif
                 @auth
                 <li class="nav-item">
                     <a class="nav-link">{{Auth::user()->name}}</a>

@@ -4,7 +4,7 @@
             <h5 class="display-5 p-5">The Aulab Post</h5>
         </div>
         <div class="col-6">
-
+            <a href="{{route('work-with-us')}}">Lavora con Noi</a>
         </div>
     </div>
 </footer>

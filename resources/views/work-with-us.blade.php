@@ -4,7 +4,7 @@
     
     <main class="container">
         <div class="row justify-content-center">
-            <div class="col-12 col md-8">
+            <div class="col-12 col-md-8">
                 <form action="{{route('user-role-request')}}" method="POST">
                     @csrf
                     <div class="mb-3">
@@ -16,7 +16,7 @@
                         </select>
                     </div>
                     <div class="mb-3">
-                        <label for="email" class="form-label">Inviaci la tua email</label>
+                        <label for="email" class="form-label">Il tuo indirizzo email</label>
                         <input type="email" class="form-control" name="email" @auth value="{{Auth::user()->email}}" @endauth>
                     </div>
                     <div class="mb-3">

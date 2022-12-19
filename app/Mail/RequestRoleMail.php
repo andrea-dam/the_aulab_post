@@ -45,7 +45,7 @@ class RequestRoleMail extends Mailable
     public function content()
     {
         return new Content(
-            view: 'mail.work-with-us',
+            view: 'mail.role-request',
         );
     }
 

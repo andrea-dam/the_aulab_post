@@ -11,6 +11,6 @@
     <h4>Richiesta per il ruolo {{$info['role']}}</h4>
     <p>Ricevuta da {{$info['email']}}</p>
     <h4>Messaggio: </h4>
-    <p>{{$info['presentation']}}</p>
+    <p>{{$info['reason']}}</p>
 </body>
 </html>

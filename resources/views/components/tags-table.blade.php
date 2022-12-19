@@ -24,6 +24,7 @@
             <td>
                 <form action="{{route('tag.delete', $tag)}}" method="POST">
                 @csrf
+                @method('DELETE')
                 <button class="btn btn-danger" type="submit">Elimina</button>
                 </form>
             </td>
