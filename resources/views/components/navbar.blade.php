@@ -22,10 +22,12 @@
                     <a class="nav-link" href="{{route('register')}}">Registrati</a>
                 </li>
                 @endguest
-                @auth
+                @if (Auth::user() && Auth::user()->is_writer)
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('article.create')}}">Crea Articolo</a>
+                    <a class="nav-link" href="{{route('article.dashboard')}}">Crea Articolo</a>
                 </li>
+                @endif
+                @auth
                 <li class="nav-item">
                     <a class="nav-link">{{Auth::user()->name}}</a>
                 </li>
