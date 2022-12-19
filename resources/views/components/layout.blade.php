@@ -10,7 +10,9 @@
 </head>
 <body class="bg-dark">
     <x-navbar />
-    {{$slot}}
+    <div class="min-vh-100">
+        {{$slot}}
+    </div>
     <x-footer />
     @livewireScripts
 </body>

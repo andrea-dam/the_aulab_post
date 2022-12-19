@@ -1,5 +1,5 @@
 <x-layout>
-    <header class="container">
+    <header class="container my-5">
         <div class="row">
             <div class="col-12">
                 <h1>Bentornato, {{Auth::user()->name}}</h1>
@@ -17,7 +17,7 @@
             </div>
             @else
             <div class="col-12">
-                <h2>Non hai scritto ancora alcun articolo</h2>
+                <h2 class="mb-3">Non hai scritto ancora alcun articolo</h2>
                 <a href="{{route('article.create')}}" class="btn btn-info">Crea il tuo primo articolo</a>
             </div>
             @endif

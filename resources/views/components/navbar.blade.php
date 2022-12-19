@@ -22,14 +22,20 @@
                     <a class="nav-link" href="{{route('register')}}">Registrati</a>
                 </li>
                 @endguest
-                @if (Auth::user() && Auth::user()->is_writer)
-                <li class="nav-item">
-                    <a class="nav-link" href="{{route('article.dashboard')}}">Crea Articolo</a>
-                </li>
-                @endif
                 @if (Auth::user() && Auth::user()->is_admin)
                 <li class="nav-item">
                     <a class="nav-link" href="{{route('admin.dashboard')}}">Dashboard Amministratore</a>
+                </li>
+                @elseif (Auth::user() && Auth::user()->is_writer)
+                <li class="nav-item">
+                    <a class="nav-link" href="{{route('article.dashboard')}}">Crea Articolo</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{route('article.dashboard')}}">Dashboard Articolista</a>
+                </li>
+                @elseif (Auth::user() && Auth::user()->is_revisor)
+                <li class="nav-item">
+                    <a class="nav-link" href="{{route('revisor.dashboard')}}">Dashboard Revisore</a>
                 </li>
                 @endif
                 @auth
@@ -37,8 +43,8 @@
                     <a class="nav-link">{{Auth::user()->name}}</a>
                 </li>
                 <li class="nav-item me-2">
-                    <a href="{{route('logout')}}" onclick="event.preventDefault(); document.getElementById('form-logout').submit();" class="nav-link">Logout</a>
-                    <form action="" class="d-none">@csrf</form>
+                    <a onclick="event.preventDefault(); document.getElementById('form-logout').submit();" class="nav-link btn">Logout</a>
+                    <form action="{{route('logout')}}" method="POST" class="d-none" id="form-logout">@csrf</form>
                 </li>
                 @endauth
                 <form action="{{route('search.article')}}" method="GET" class="d-flex" role="search">

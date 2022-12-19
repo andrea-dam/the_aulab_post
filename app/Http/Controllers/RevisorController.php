@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class RevisorController extends Controller
 {
     public function revisorDashboard () {
-        $articles = Article::where('isaccepted', false)->get();
+        $articles = Article::where('is_accepted', false)->get();
         return view('revisor.dashboard', compact('articles'));
     }
 

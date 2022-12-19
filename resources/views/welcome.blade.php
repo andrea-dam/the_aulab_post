@@ -12,7 +12,7 @@
         <div class="row">
             @foreach ($articles as $article)
                 <div class="card p-0 border-0">
-                    <img class="" src="{{Storage::url($article->img)}}" alt="{{$article->title}}">
+                    <img class="card-img-top" src="{{Storage::url($article->img)}}" alt="{{$article->title}}">
                     <div class="card-body">
                         <h5 class="card-title text-dark">{{$article->title}}</h5>
                         <p class="card-text text-dark">{{substr($article->description, 0, 100)}} ...</p>

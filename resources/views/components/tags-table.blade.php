@@ -3,9 +3,9 @@
         <tr>
             <th scope="col">#</th>
             <th scope="col">Tag</th>
-            <th scope="col">Articoli</th>
+            <th scope="col">Articoli con questo Tag</th>
             <th scope="col">Modifica</th>
-            <th scope="col">Elimina</th>
+            <th scope="col" class="text-end">Elimina</th>
         </tr>
     </thead>
     <tbody>
@@ -17,11 +17,13 @@
             <td>
                 <form action="{{route('tag.edit', $tag)}}" method="POST">
                 @csrf
-                <input type="text" class="form-control" placeholder="Nuovo Nome" name="name">
-                <button class="btn btn-info" type="submit">Salva</button>
-                </form>
+                <span class="d-flex">
+                    <input type="text" class="form-control me-3" placeholder="Nuovo Nome" name="name">
+                    <button class="btn btn-info" type="submit">Salva</button>
+                </span>
+            </form>
             </td>
-            <td>
+            <td class="text-end">
                 <form action="{{route('tag.delete', $tag)}}" method="POST">
                 @csrf
                 @method('DELETE')
