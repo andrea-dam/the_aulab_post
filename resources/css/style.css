@@ -6,6 +6,10 @@ header {
     height: 50vh;
 }
 
+h1 {
+    font-family: "New Yorker";
+}
+
 .newspapers {
     background-image: linear-gradient(90deg, rgba(55,58,60,1) 0%, rgba(255,255,255,0) 100%), url(/public/img/news-1172463.jpg);
     background-size: cover;
